@@ -1,0 +1,24 @@
+body{
+  background-color: #aaa;
+}
+
+.img1 {
+  width: 200px;
+  position: absolute;
+  right: 200px;
+  bottom: 100px;
+}
+
+/* div{
+  width: 200px;
+  height: 130px;
+  background-color: darkgoldenrod;
+  margin: 100px auto;
+  border-radius: 20px;
+  transform: perspective(15px) rotateX(5deg);
+  transform-origin: left bottom;
+} */
+
+/* svg{
+  display: none;
+} */
