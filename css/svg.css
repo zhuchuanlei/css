@@ -3,10 +3,12 @@ body{
 }
 
 .img1 {
-  width: 200px;
+  width: 360px;
   position: absolute;
-  right: 200px;
-  bottom: 100px;
+  right:530px;
+  right: 30px;
+  top: 10px;
+  top: 140px;
 }
 
 /* div{
