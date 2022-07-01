@@ -28,6 +28,12 @@ const Index = () => {
       if (!commodityCol.includes(itemValue['商品'])) {
         commodityCol.push(itemValue['商品']);
       }
+      const hasData = data.find(i => i['联系电话'] === itemValue['联系电话']);
+      console.log(hasData)
+      if (hasData) {
+        hasData[itemValue['商品']] = itemValue['数量']
+        return;
+      }
 
       // itemValue['地址'] = `${itemValue[address[0]]}-${itemValue[address[1]]}-${itemValue[address[2]]}`;
       itemValue['地址'] = formatAddress(itemValue); // `${itemValue[address[0]]}-${itemValue[address[1]]}-${itemValue[address[2]]}`;
@@ -62,9 +68,9 @@ const Index = () => {
 
 
 
-  return <div>
+  return <div style={{padding: 20}}>
     <ReadExcel onChangeData={onChangeData} />
-    <Button onClick={onClickDown}>下载模版</Button>
+    <Button onClick={onClickDown}>导出Excel</Button>
   </div>
 }
 export default Index;

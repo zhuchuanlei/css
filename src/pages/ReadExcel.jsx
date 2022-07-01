@@ -30,7 +30,6 @@ const ReadExcel = (props) => {
 
   return (
     <>
-    
     <Upload
       maxCount={10}
       multiple={true}
@@ -40,7 +39,8 @@ const ReadExcel = (props) => {
       <Button type='primary'>上传</Button>
     </Upload>
 
-<Button onClick={onClickClear}>清除数据</Button>
+      
+<Button style={{margin: '20px 20px 0 0 '}} onClick={onClickClear}>清除数据</Button>
 </>
   );
 }
