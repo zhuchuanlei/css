@@ -1,0 +1,1 @@
+browser-sync start --server --port 7001 --files "css/*.css, *.html, *.js"

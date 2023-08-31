@@ -1,1 +1,1 @@
-browser-sync start --server --port 8001 --files "css/*.css, *.html, js/*.js"
+browser-sync start --server --port 3101 --files "**/*.css, *.html, **/*.js"

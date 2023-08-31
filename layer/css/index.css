@@ -1,0 +1,20 @@
+
+/* @import url(lever2.css) layer(L); */
+
+.test{
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+@layer  B.B1;
+@layer R {
+  div {
+    background-color: red !important;
+  }
+}
+@layer B {
+  div {
+    background-color: blue !important;
+  }
+}

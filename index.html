@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CSS</title>
-    <link href="./css/index.css" rel="stylesheet" type="text/css"  />
-  </head>
-  <body>
-    <div class="moon"></div>
-    <div class="snow">
-      <div>
-        <span></span>
-      </div>
-    </div>
-  </body>
+
+<head>
+  <title>CSS</title>
+  <link href="./css/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script>
+    const list = [
+      {title: '月亮移动', url: 'moon', desc: 'animation '}
+    ]
+    const ToPage = (url) => {
+      window.location.href=`${url}/index.html`
+    }
+  </script>
+  <div onclick="ToPage('moon')">
+    <span>月亮移动</span>
+    <span>animation</span>
+  </div>
+  <div onclick="ToPage('animation')">
+    <span>CSS 碰撞</span>
+    <span>animation</span>
+  </div>
+  <div onclick="ToPage('layer')">
+    <span>layer属性</span>
+    <span>CSS新属性layer</span>
+  </div>
+  <div onclick="ToPage('svg')">
+    <span>SVG 画线和动画</span>
+    <span>CSS新属性layer</span>
+  </div>
+</body>
+
 </html>
