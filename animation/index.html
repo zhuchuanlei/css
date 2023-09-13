@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>CSS</title>
+  <title>CSS 碰撞</title>
   <style>
     .box {
       position: absolute;
@@ -12,7 +12,10 @@
       height: 100px;
       border-radius: 50%;
       background: #0cf;
-      animation-composition: accumulate;
+
+      /* 使动效累加，原来动效冲突使会被替换 */
+      animation-composition: accumulate; 
+
       animation:
         horizontal 2.6s infinite linear alternate,
         vertical 2s infinite linear alternate,

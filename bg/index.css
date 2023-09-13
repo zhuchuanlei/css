@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  --spread: 12px;
+  --roundiness: 8px;
+
+  font-size: 24px;
+  position: relative;
+  line-height: 32px;
+  padding: var(--spread);
+}
+
+.container {
+  padding: calc(var(--spread) * 2) var(--spread);
+}
+
+.shadow-container {
+  background-color: white;
+  position: absolute;
+  filter: blur(var(--roundiness)) contrast(40);
+  pointer-events: none;
+}
+
+.shadow {
+  background-color: #000;
+  color: green;
+}
+
+.text {
+  position: relative;
+  padding: var(--spread);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.actual {
+  z-index: 1;
+  color: white;
+}
