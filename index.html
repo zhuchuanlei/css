@@ -3,30 +3,63 @@
 
 <head>
   <title>CSS</title>
-  <link href="./css/index.css" rel="stylesheet" type="text/css" />
+  <style>
+     #css, #js {
+      display: inline-block;
+      width: 40%;
+      vertical-align: top;
+    }
+    #css>div, #js>div {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    #css span:nth-child(1), #js span:nth-child(1) {
+      font-size: 18px;
+    } 
+    #css span:nth-child(2), #js  span:nth-child(2) {
+      font-size: 14px;
+      margin-left: 20px;
+    }
+   
+  </style>
 </head>
 
 <body>
+  <div id="css"></div>
+  <div id="js"></div>
   <script>
     const list = [
-      {title: '月亮移动', url: 'moon', desc: 'animation '},
-      {title: 'CSS 碰撞', url: 'animation', desc: 'animation '},
-      {title: 'layer属性', url: 'layer', desc: 'CSS新属性layer '},
-      {title: 'SVG 画线和动画', url: 'svg', desc: 'CSS新属性layer '},
-      {title: '段落文字的背景色', url: 'bg', desc: ' '},
-      {title: '时钟', url: 'clock', desc: ' '},
+      { title: '月亮移动', url: 'moon', desc: 'animation ' },
+      { title: 'CSS 碰撞', url: 'animation', desc: 'animation ' },
+      { title: 'layer属性', url: 'layer', desc: 'CSS新属性layer ' },
+      { title: 'SVG 画线和动画', url: 'svg', desc: 'CSS新属性layer ' },
+      { title: '段落文字的背景色', url: 'bg', desc: ' ' },
+      { title: '时钟', url: 'clock', desc: ' ' },
+    ]
+    const jsList = [
+      { title: '请求优先级', url: 'js/fetchpriority', desc: ' ' },
     ]
     const ToPage = (url) => {
-      window.location.href=`${url}/index.html`
+      window.location.href = `${url}/index.html`
     }
 
-    const body = document.getElementsByTagName('BODY')[0];
+    const css = document.getElementById('css');
     list.forEach(i => {
 
       const div = document.createElement('div');
       div.innerHTML = `<span>${i.title}</span><span>${i.desc}</span>`;
       div.onclick = () => ToPage(i.url)
-      body.appendChild(div);
+      css.appendChild(div);
+    })
+
+
+    const js = document.getElementById('js');
+    jsList.forEach(i => {
+
+      const div = document.createElement('div');
+      div.innerHTML = `<span>${i.title}</span><span>${i.desc}</span>`;
+      div.onclick = () => ToPage(i.url)
+      js.appendChild(div);
     })
   </script>
 </body>
